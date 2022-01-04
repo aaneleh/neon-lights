@@ -1,0 +1,127 @@
+/*** SETUP ***/
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+:root {
+    --background-color: hsl(317, 16%, 8%);
+    --font-color: hsl(317, 0%, 100%);
+    --icons-color: hsl(317, 0%, 100%);
+
+    --hue: 317;
+    --bright-color: hsl(317, 100%, 50%);
+
+
+}
+body {
+    background-color: var(--background-color);
+}
+*{
+    margin:0;
+    font-family: 'Quicksand', sans-serif;
+}
+body{
+    background: var(--background-color);
+    color: var(--font-color);
+    padding: 0;
+    overflow-x: hidden;
+}
+h1, h3, h3{
+    font-size: 3rem;
+}
+p, label{
+    font-size: 1rem;
+}
+a {
+    text-decoration: none;
+    color: var(--font-color);
+}
+section{
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+/*** HEADER ***/
+.header {
+    padding: 1em 1em;
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+}
+.header svg{
+    fill: var(--icons-color);
+    width: 2em;
+    height: auto;
+}
+.header .others-icons{
+    display: flex;
+}
+.logo {
+    color: var(--font-color);
+    position: relative;
+    text-shadow: 0px 0px 20px var(--bright-color);
+}
+header {
+    border-bottom: 0.020em solid var(--font-color);
+}
+.links{
+    display: flex;
+    list-style-type: none;
+    justify-content: space-between;
+    align-content: center;
+    padding: 1.5em 10em;
+}
+
+/* Invisible on bigger screens */
+#list-icon{
+    position: absolute;
+    visibility: hidden;
+}
+#side-bar{
+    /* set to hidden */
+    position: absolute;
+    visibility: hidden;
+
+    /* side bar style */
+    list-style-type: none;
+    top: 0;
+    right: 0;
+
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+    justify-content: space-evenly;
+
+    height: 100vh;
+    padding: 0em 10em;
+    background-color: var(--background-color);
+    border-left: 0.020em solid var(--font-color);
+}
+
+/* SMOL SCWEEN */
+@media (max-width: 700px){
+
+    /* set to hidden */
+    .links{
+        visibility: hidden;
+        position: absolute;
+    }
+    .cart-icon{
+        position: absolute;
+        visibility: hidden;
+    }
+
+    /* set to visible */
+    #list-icon{
+        position: relative;
+        visibility: visible;
+        margin-left: 2em;
+    }
+    #close{
+        position: absolute;
+        left: 2em;
+        top: 2em;
+    }
+    #side-bar.active{
+        visibility: visible;
+        position: absolute;
+    }
+}
