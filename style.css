@@ -1,4 +1,5 @@
 /*** SETUP ***/
+
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
 :root {
     /* COLORS */
@@ -28,15 +29,17 @@ body{
     padding: 0;
     overflow-x: hidden;
 }
-h1, h3, h3{
-    font-size: 3rem;
+h1{
+    font-size: 2rem;
+}
+h2{
+    font-size: 2rem;
+}
+h3{
+    font-size: 1.5rem;
 }
 p, label{
     font-size: 1rem;
-}
-a {
-    text-decoration: none;
-    color: var(--font-color);
 }
 section{
     margin: 0;
@@ -44,10 +47,51 @@ section{
     position: relative;
 }
 
-/*** HEADER ***/
+/************* LINKS *************/
+a, .a{
+    text-decoration: none;
+    color: var(--font-color);
+    cursor: pointer;
+
+    padding: 0.5em 1em;
+    border-radius: 0.75em;
+    background-color: var(--background-color);
+    transition: background-color 0.2s, color 0.2s;
+}
+a:hover, .a:hover{
+    background-color: var(--font-color);
+    color: var(--background-color);
+}
+
+/************* BUTTON *************/
+.button {
+    font-size: 1rem;
+    font-weight: var(--semi-bold);
+    color: var(--background-color);
+
+    padding: 0.5em 1em;
+    border-radius: 0.75em;
+    background-color: var(--bright-color);
+    border: 0.2em solid var(--bright-color);
+
+    transition: background-color 0.2s, color 0.2s;
+}
+.button:hover{
+    background-color: var(--background-color);
+    color: var(--bright-color);
+}
+
+
+
+
+
+
+/************* HEADER *************/
+
 header{
     position: relative;
     z-index: 100;
+    border-bottom: 0.020em solid var(--font-color);
 }
 .header {
     padding: 1em 1em;
@@ -68,9 +112,6 @@ header{
     position: relative;
     text-shadow: 0px 0px 20px var(--bright-color);
 }
-header {
-    border-bottom: 0.020em solid var(--font-color);
-}
 .links{
     display: flex;
     list-style-type: none;
@@ -89,6 +130,7 @@ header {
     position: absolute;
     top: 0;
     right: -100%;
+    visibility: hidden;
     transition: right 0.3s;
 
     display: flex;
@@ -102,7 +144,9 @@ header {
     border-left: 0.020em solid var(--font-color);
 }
 
-/************* MAIN *************/
+
+
+
 
 /************* HOME *************/
 #home{
@@ -118,7 +162,7 @@ header {
     width: max(700px, 100%);
     transition: right 0.75s, left 0.75s;
 }
-.image{
+.slide .image{
     object-fit: cover;
     width: max(700px, 100%);
     user-select: none;
@@ -159,9 +203,69 @@ header {
 
 
 
+/************* PRODUCTS & SALE *************/
+
+#products, #sale{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-bottom: 0.020em solid var(--font-color);
+}
+.section-title{
+    text-align: center;
+    margin: 1.5em 0;
+}
+
+.products-container, .sale-container{
+    display: grid;
+} 
+
+.product {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 1.5em 1.5em;
+    text-align: justify;
+}
+.product .description{
+    max-width: 30em;
+}
+.product *{
+    margin: 0.75em;
+}
+.product .image{
+    object-fit: cover;
+    width: max(250px, 25%);
+    user-select: none;
+}
 
 
 
+
+
+/************* ABOUT *************/
+#about{
+    border-bottom: 0.020em solid var(--font-color);
+}
+.about-container {
+    margin: 2em;
+}
+
+
+
+
+
+/************* FOOTER *************/
+
+.footer-container {
+    display: flex;
+    line-height: 3em;
+    justify-content: space-evenly;
+}
+
+
+
+/************* MEDIA QUERIES *************/
 
 /* SMOL SCWEEN */
 @media (max-width: 700px){
@@ -188,5 +292,31 @@ header {
     }
     #side-bar.active{
         right: 0;
+        visibility: visible;
+    }
+    .footer-container {
+        display: block;
+        text-align: center;
     }
 }
+
+@media (min-width: 1000px){
+    .products-container{
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+}
+@media (min-width: 1250px){
+    .sale-container{
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 1fr;
+    }
+}
+@media (min-width: 1500px){
+    .products-container{
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: 1fr;
+    }
+
+}
+
