@@ -35,18 +35,10 @@
 
         <div>
             <ul class="links">
-                <li>
-                    Home
-                </li>
-                <li>
-                    Products
-                </li>
-                <li>
-                    Sale
-                </li>
-                <li>
-                    About
-                </li>
+                <li>Home</li>
+                <li>Products</li>
+                <li>Sale</li>
+                <li>About</li>
             </ul>
         </div>
 
@@ -54,9 +46,6 @@
             <ul id="side-bar" class="">
                 <li id="close" onclick="toggleSidebar()">
                     Close
-                </li>
-                <li>
-                    Search
                 </li>
                 <li>
                     Home
@@ -78,6 +67,51 @@
     </header>
 
     <main>
+        <!-- HOME -->
+        <section id="home">
+            <div id="home-slides">
+                <div class="slide"  id="slide-1">
+                    <img class="image" src="palceholder1-bigger.png" alt="placeholder">
+                    <p class="slide-text">
+                        Slide 1
+                    </p>
+                </div>
+                <div class="slide" id="slide-2">
+                    <img class="image" src="palceholder2-bigger.png" alt="placeholder">
+                    <p class="slide-text">
+                        Slide 2
+                    </p>
+                </div>
+                <div>
+                    <img id="image-placeholder" src="palceholder-bigger.png" alt="placeholder">
+                </div>
+            </div>
+            <div class="pagination">
+                <div onclick="ImageOne()">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#FFFFFF"><path d="M0 0h24v24H0V0z" fill="none"/> <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z"/>
+                        <circle id="check-1"  cx="12" cy="12" r="5"/></svg>
+                </div>
+                <div onclick="ImageTwo()">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#FFFFFF"><path d="M0 0h24v24H0V0z" fill="none"/> <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z"/>
+                        <circle id="check-2"  cx="12" cy="12" r="5"/></svg>
+                </div>
+            </div>
+        </section>
+
+        <!-- PRODUCTS -->
+        <section id="products">
+
+        </section>
+
+        <!-- SALE -->
+        <section id="sale">
+
+        </section>
+
+        <!-- ABOUT -->
+        <section id="about">
+            
+        </section>
     </main>
 
     <footer>

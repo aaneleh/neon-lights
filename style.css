@@ -1,14 +1,19 @@
 /*** SETUP ***/
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
 :root {
-    --background-color: hsl(317, 16%, 8%);
-    --font-color: hsl(317, 0%, 100%);
-    --icons-color: hsl(317, 0%, 100%);
-
+    /* COLORS */
     --hue: 317;
-    --bright-color: hsl(317, 100%, 50%);
+    --background-color: hsl(var(--hue), 16%, 8%);
+    --font-color:       hsl(var(--hue), 0%, 100%);
+    --icons-color:      hsl(var(--hue), 0%, 100%);
+    --bright-color:     hsl(var(--hue), 100%, 50%);
 
-
+    /* FONT-WEIGHT */
+    --light: 300;
+    --regular: 400;
+    --medium: 500;
+    --semi-bold: 600;
+    --bold: 700;
 }
 body {
     background-color: var(--background-color);
@@ -40,6 +45,10 @@ section{
 }
 
 /*** HEADER ***/
+header{
+    position: relative;
+    z-index: 100;
+}
 .header {
     padding: 1em 1em;
     display: flex;
@@ -76,14 +85,11 @@ header {
     visibility: hidden;
 }
 #side-bar{
-    /* set to hidden */
-    position: absolute;
-    visibility: hidden;
-
-    /* side bar style */
     list-style-type: none;
+    position: absolute;
     top: 0;
-    right: 0;
+    right: -100%;
+    transition: right 0.3s;
 
     display: flex;
     flex-direction: column;
@@ -96,9 +102,69 @@ header {
     border-left: 0.020em solid var(--font-color);
 }
 
+/************* MAIN *************/
+
+/************* HOME *************/
+#home{
+    position: relative;
+    z-index: 20;
+}
+/* SLIDES */
+#home-slides {
+    position: relative;
+}
+.slide{
+    position: absolute;
+    width: max(700px, 100%);
+    transition: right 0.75s, left 0.75s;
+}
+.image{
+    object-fit: cover;
+    width: max(700px, 100%);
+    user-select: none;
+}
+#slide-1 {
+    right: 0%;
+}
+#slide-2 {
+    left: +100%;
+}
+.slide-text {
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    bottom: 5em;
+    color: black
+}
+/* PAGINATION */
+#image-placeholder{ /* makes it easier to set the pagination location */
+    position: relative;
+    visibility: hidden;
+    width: max(700px, 100%);
+}
+.pagination svg{
+    fill: black; /* depends on what image I end up chosing */
+}
+.pagination{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    bottom: 1.5em;
+}
+.checked{
+    visibility: hidden; 
+}
+
+
+
+
+
+
+
+
 /* SMOL SCWEEN */
 @media (max-width: 700px){
-
     /* set to hidden */
     .links{
         visibility: hidden;
@@ -121,7 +187,6 @@ header {
         top: 2em;
     }
     #side-bar.active{
-        visibility: visible;
-        position: absolute;
+        right: 0;
     }
 }
