@@ -4,11 +4,18 @@
 :root {
     /* COLORS */
     --hue: 317;
+    --bright-color:     hsl(var(--hue), 100%, 50%);
+
+    /*    LIGHT MODE */
+    /*--background-color: hsl(var(--hue), 0%, 100%);
+    --font-color:       hsl(var(--hue), 16%, 8%);
+    --icons-color:      hsl(var(--hue), 16%, 8%);  */
+
+    /* DARK MODE */
     --background-color: hsl(var(--hue), 16%, 8%);
     --font-color:       hsl(var(--hue), 0%, 100%);
     --icons-color:      hsl(var(--hue), 0%, 100%);
-    --bright-color:     hsl(var(--hue), 100%, 50%);
-
+    
     /* FONT-WEIGHT */
     --light: 300;
     --regular: 400;
@@ -46,24 +53,33 @@ section{
     padding: 0;
     position: relative;
 }
-
-/************* LINKS *************/
-a, .a{
+a{
     text-decoration: none;
     color: var(--font-color);
-    cursor: pointer;
+}
 
+/************* WHITE LINK *************/
+.link{
+    cursor: pointer;
     padding: 0.5em 1em;
     border-radius: 0.75em;
     background-color: var(--background-color);
     transition: background-color 0.2s, color 0.2s;
 }
-a:hover, .a:hover{
+.link:hover{
     background-color: var(--font-color);
     color: var(--background-color);
 }
+.link svg{
+    fill: var(--font-color);
+    transition: fill 0.2s;
+}
+.link:hover svg{
+    fill: var(--background-color);
+}
 
-/************* BUTTON *************/
+
+/************* PINK BUTTON *************/
 .button {
     font-size: 1rem;
     font-weight: var(--semi-bold);
@@ -80,7 +96,6 @@ a:hover, .a:hover{
     background-color: var(--background-color);
     color: var(--bright-color);
 }
-
 
 
 
@@ -108,9 +123,10 @@ header{
     display: flex;
 }
 .logo {
-    color: var(--font-color);
+    color: #FFF;
     position: relative;
-    text-shadow: 0px 0px 20px var(--bright-color);
+    text-shadow: 0px 0px 5px var(--font-color), 0px 0px 10px var(--bright-color),0px 0px 20px var(--bright-color), 0px 0px 20px var(--bright-color), 0px 0px 30px var(--bright-color);
+
 }
 .links{
     display: flex;
@@ -127,7 +143,7 @@ header{
 }
 #side-bar{
     list-style-type: none;
-    position: absolute;
+    position: fixed;
     top: 0;
     right: -100%;
     visibility: hidden;
@@ -136,17 +152,18 @@ header{
     display: flex;
     flex-direction: column;
     text-align: right;
+    align-items: flex-end;
     justify-content: space-evenly;
 
     height: 100vh;
-    padding: 0em 10em;
+    padding: 0em 5em 0 10em;
     background-color: var(--background-color);
     border-left: 0.020em solid var(--font-color);
 }
-
-
-
-
+#side-bar .link{
+    display: flex;
+    align-items: center;
+}
 
 /************* HOME *************/
 #home{
