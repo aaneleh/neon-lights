@@ -41,7 +41,6 @@ window.onload = function(){
     lastBrightColor = localStorage.getItem('bright-color');
     if(lastBrightColor != null){
         root.style.setProperty('--bright-color', JSON.parse(lastBrightColor));
-        color_input.value = JSON.parse(lastBrightColor);
     } else{
         root.style.setProperty('--bright-color', '#ff00b7');
     }

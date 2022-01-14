@@ -27,6 +27,7 @@ function ImageTwo(){
 }
 
 
+
 /********* CHANGE COLOR *********/
 const color_input = document.getElementById('color-input');
 function changeColor(){
