@@ -12,7 +12,8 @@ function newItem(id, image, name, price, quantity){
 
     /* ADD TEXT BASED ON INPUT */
     idEl.textContent = id;
-    imageEl.src = "/neon-lights/"+image;
+    imageEl.src = "/"+image;
+    //imageEl.src = "/neon-lights/"+image;
     nameEl.textContent = name;
     descriptionEl.appendChild(nameEl);
     spanEl.textContent = price;
@@ -40,6 +41,7 @@ function newItem(id, image, name, price, quantity){
     return newDiv;
 }
 
+/* gets carts */
 var localCart = localStorage.getItem('cart');
 var cart;
 if(localCart !== null){
@@ -48,18 +50,28 @@ if(localCart !== null){
     cart = [];
 }
 
+/* prints on screen */
 const cart_container = document.querySelector('.cart-container');
-
 if(cart == ""){
-    alert('cart empty');
     var cartEmpty = document.createElement('h3');
     cartEmpty.textContent = "Your cart is empty!";
     cartEmpty.classList.add('cartEmpty');
     cart_container.appendChild(cartEmpty);
 } else{
-    alert('cart not empty');
-
     for (i = 0; i < cart.length; i++) {
         cart_container.appendChild(newItem(cart[i].id, cart[i].image, cart[i].name, cart[i].price, cart[i].quantity))
     }
 }
+
+/**** CALCULATES FINAL PRICE ****/
+var total = 0;
+const final_priceEl = document.getElementById('total-price');
+
+var price, quantity;
+
+for (i = 0; i < cart.length; i++) {
+    price = parseInt(cart[i].price);
+    quantity = parseInt(cart[i].quantity);
+    total += price * quantity;
+}
+final_priceEl.innerHTML = total + ' USD';
