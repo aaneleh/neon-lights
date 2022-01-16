@@ -35,18 +35,35 @@ function createProduct(id, image, name, price, quantity){
         quantity: quantity
     };
 }
+
+/* MODAL */
+const modal = document.getElementById('modal');
+const modal_title = document.getElementById('modal-title');
+const modal_image = document.getElementById('modal-image');
+function toggleModal(title, image){
+    modal.classList.toggle('active');
+    modal_title.textContent = title;
+    modal_image.src = "/"+image;
+
+    setTimeout(function() {
+        modal.classList.toggle('active');
+    }, 1750);
+}
+
 /* FUNÇÃO 'addtoCart(id) */
 let nome;
 let preco;
 let newProduct;
 function addtoCart(id){
-    /* linha 28, 29 e 30 */
+    image = document.querySelector("#product-"+id+" img").getAttribute('src');
+    nome = document.querySelector("#product-"+id+" h3").textContent;
+    preco = document.querySelector("#product-"+id+" .price").textContent;
+    
+    toggleModal(nome, image);
+
     //checa se o id que ta sendo adicionado já está no carrinho
     if(!checkIfRepeat(id)){ 
         //se for false cria um novo produto e adiciona no carrinho
-        image = document.querySelector("#product-"+id+" img").getAttribute('src');
-        nome = document.querySelector("#product-"+id+" h3").textContent;
-        preco = document.querySelector("#product-"+id+" .price").textContent;
         saveProduct(createProduct(id, image, nome, preco, 1));
     }
     //se for true aumenta o atributo quantidade

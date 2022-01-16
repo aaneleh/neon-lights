@@ -399,3 +399,33 @@ header{
     margin-top: 3em;
 }
 
+/* MODAL */
+#modal {
+    display: flex;
+    align-items: center;
+    color: var(--font-color);
+    
+    position: fixed;
+    right: -100%;
+    bottom: 2em;
+    transition: right 0.4s;
+    
+    background-color: var(--background-color);
+    height: 7em;
+    width: 30em;
+    padding: 2em;
+    border-radius: 1em;
+    box-shadow: 0 0 0.2em  var(--font-color);
+}
+#modal.active{
+    right: 2em;
+}
+#modal .image{
+    object-fit: cover;
+    width: min(200px, 30%);
+    border-radius: 1em;
+    box-shadow: 0 0 0.2em  var(--font-color);
+}
+#modal-title {
+    text-decoration: underline;
+}
