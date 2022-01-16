@@ -1,4 +1,12 @@
 /************************* CART DISPLAY *************************/
+var localCart = localStorage.getItem('cart');
+var cart;
+if(localCart !== null){
+    cart = JSON.parse(localCart);
+} else {
+    cart = [];
+}
+
 function newItem(id, image, name, price, quantity){
     // CREATED ELEMENTS NEEDED
     var idEl, imageEl, descriptionEl, nameEl, spanEl, priceEl, inputEl;
