@@ -1,12 +1,4 @@
 /************************* CART DISPLAY *************************/
-var localCart = localStorage.getItem('cart');
-var cart;
-if(localCart !== null){
-    cart = JSON.parse(localCart);
-} else {
-    cart = [];
-}
-
 function newItem(id, image, name, price, quantity){
     // CREATED ELEMENTS NEEDED
     var idEl, imageEl, descriptionEl, nameEl, spanEl, priceEl, inputEl;
@@ -48,17 +40,26 @@ function newItem(id, image, name, price, quantity){
     return newDiv;
 }
 
+var localCart = localStorage.getItem('cart');
+var cart;
+if(localCart !== null){
+    cart = JSON.parse(localCart);
+} else {
+    cart = [];
+}
 
 const cart_container = document.querySelector('.cart-container');
-window.onload = function(){
-    if(cart == ""){
-        var cartEmpty = document.createElement('h3');
-        cartEmpty.textContent = "Your cart is empty!";
-        cartEmpty.classList.add('cartEmpty');
-        cart_container.appendChild(cartEmpty);
-    } else{
-        for (i = 0; i < cart.length; i++) {
-            cart_container.appendChild(newItem(cart[i].id, cart[i].image, cart[i].name, cart[i].price, cart[i].quantity))
-        }
+
+if(cart == ""){
+    alert('cart empty');
+    var cartEmpty = document.createElement('h3');
+    cartEmpty.textContent = "Your cart is empty!";
+    cartEmpty.classList.add('cartEmpty');
+    cart_container.appendChild(cartEmpty);
+} else{
+    alert('cart not empty');
+
+    for (i = 0; i < cart.length; i++) {
+        cart_container.appendChild(newItem(cart[i].id, cart[i].image, cart[i].name, cart[i].price, cart[i].quantity))
     }
 }
