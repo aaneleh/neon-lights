@@ -19,6 +19,7 @@ Site fictional de placas de neon
 Site fictional de placas de neon.  
 Nele você pode trocar entre os temas claro e escuro e as cores do site.
 Há uma disponibilidade de 6 opções, você pode adiciona-las ao carrinho o que ativa um pop-up.  
+Todos os produtos foram feitos por mim em 3d no blender 3.0.  
 E quando você quiser pode clicar no ícone do carrinho de compras no desktop ou na barra lateral em um dispositivo mobile.  
 No carrinho você pode ver a soma de todos os itens e no futuro poderá também aumentar/diminuir sua quantidade ou excluir de seu carrinho.  
 
