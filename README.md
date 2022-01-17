@@ -1,10 +1,10 @@
 # Neon-lights
 
 ![Badge last-commit](https://img.shields.io/github/last-commit/aaneleh/neon-lights)
-![Badge issues](https://img.shields.io/github/issues/aaneleh/neon-lights)
+![Badge twitter](https://img.shields.io/github/issues/aaneleh/neon-lights)
 ![Badge twitter](https://img.shields.io/twitter/follow/helena_kurzzz)
 
-Placeholder
+Site fictional de placas de neon
 
 ## Indice
 
@@ -14,18 +14,25 @@ Placeholder
 * [Tecnologias](#tecnologias)
 * [English Version](#english-version)
 
-
 ## Descrição
 
-Descrição
+Site fictional de placas de neon.  
+Nele você pode trocar entre os temas claro e escuro e as cores do site.
+Há uma disponibilidade de 6 opções, você pode adiciona-las ao carrinho o que ativa um pop-up.  
+E quando você quiser pode clicar no ícone do carrinho de compras no desktop ou na barra lateral em um dispositivo mobile.  
+No carrinho você pode ver a soma de todos os itens e no futuro poderá também aumentar/diminuir sua quantidade ou excluir de seu carrinho.  
 
 ## Características
 
-Características
+- Trocar entre temas claro e escuro
+- Mudar a cor em destaque presente no título e nos botões
+- Adicionar itens ao carrinho
+- Visualizar os itens do carrinho e o preço total
+- Todas as função citadas acima ficam salvas no navegador
 
 ## Demonstração
 
-Demonstração
+Em breve, quero fazer alguns ajustes primeiro.
 
 ## Tecnologias
 
