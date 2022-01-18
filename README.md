@@ -29,7 +29,7 @@ No carrinho você pode ver a soma de todos os itens e no futuro poderá também 
 - Mudar a cor em destaque presente no título e nos botões
 - Adicionar itens ao carrinho
 - Visualizar os itens do carrinho e o preço total
-- Todas as função citadas acima ficam salvas no navegador
+- Todas as função citadas acima se mantêm salvas no navegador
 
 ## Demonstração
 
@@ -51,22 +51,20 @@ Mas você pode testar aqui: https://aaneleh.github.io/neon-lights/
 
 ## Description
 
-Fictional neon lights selling website
-
-  
-Nele você pode trocar entre os temas claro e escuro e as cores do site.
-Há uma disponibilidade de 6 opções, você pode adiciona-las ao carrinho o que ativa um pop-up.  
-Todos os produtos foram feitos por mim em 3d no blender 3.0.  
-E quando você quiser pode clicar no ícone do carrinho de compras no desktop ou na barra lateral em um dispositivo mobile.  
-No carrinho você pode ver a soma de todos os itens e no futuro poderá também aumentar/diminuir sua quantidade ou excluir de seu carrinho.  
+Fictional neon lights selling website  
+You can switch between light and dark mode and the main color.  
+There's 6 products options, you can add it to cart which activates a popup.  
+All the products were made by me in 3d in blender 3.0.  
+Whenever you want you can click on the shopping cart icon (on the desktop) or on the side bar icon (on mobile) to the your cart.  
+In your cart you can see the sum of all the itens and soon will be able to increase/decrease the quantity or delete the item.  
 
 ## Features
 
-- Trocar entre temas claro e escuro
-- Mudar a cor em destaque presente no título e nos botões
-- Adicionar itens ao carrinho
-- Visualizar os itens do carrinho e o preço total
-- Todas as função citadas acima ficam salvas no navegador
+- Switch between light and dark mode
+- Change the main color present in the title and buttons
+- Add itens to cart
+- See the itens in your cart and the total
+- All the function above stay saved in the browser
 
 ## Demo
 
