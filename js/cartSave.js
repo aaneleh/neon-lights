@@ -43,7 +43,7 @@ const modal_image = document.getElementById('modal-image');
 function toggleModal(title, image){
     modal.classList.toggle('active');
     modal_title.textContent = title;
-    modal_image.src = "/"+image;
+    modal_image.src = "/neon-lights/"+image;
 
     setTimeout(function() {
         modal.classList.toggle('active');

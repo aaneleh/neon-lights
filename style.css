@@ -57,6 +57,9 @@ a{
     text-decoration: none;
     color: var(--font-color);
 }
+button{
+    -webkit-appearance: none;
+}
 
 /************* WHITE LINK *************/
 .link{
@@ -171,6 +174,9 @@ header{
 #close svg{
     margin: 0 0.5em 0 0;
 }
+
+
+
 
 /************* HOME *************/
 #home{
@@ -319,6 +325,7 @@ header{
 
 
 
+
 /************* MEDIA QUERIES *************/
 
 /* SMOL SCWEEN */
@@ -344,6 +351,9 @@ header{
         left: 2em;
         top: 2em;
     }
+    #side-bar {
+        height: max(115vh, 100%);
+    }
     #side-bar.active{
         right: 0;
         visibility: visible;
@@ -365,16 +375,22 @@ header{
     }
 }
 
-/* CART */
+
+
+
+/**************** CART *****************/
 #cart {
     padding: 0 2em 2em;
     border-bottom: 0.020em solid var(--font-color);
 }
 .item {
     position: relative;
+
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
+    
+    margin: 0 2em;
 }
 .item .image{
     object-fit: cover;
@@ -384,6 +400,7 @@ header{
     box-shadow: 0 0 0.2em  var(--font-color);
 }
 .item-description {
+    width: 100%;
     height: 100%;
     margin: 4em 5em 0 0;
     align-self: flex-start;
@@ -399,16 +416,38 @@ header{
     margin-top: 3em;
 }
 
-/* MODAL */
+@media (max-width: 700px){
+    .item .image{
+        position: absolute;
+        visibility: hidden;
+    }
+    .item-description {
+        margin: 5em 2em;
+    }
+}
+@media (min-width: 1200px){
+    .cart-container{
+        width: 70vw;
+        margin: auto;
+    }
+}
+
+
+
+
+
+/************ MODAL *************/
 #modal {
     display: flex;
     align-items: center;
     color: var(--font-color);
     
     position: fixed;
-    right: -100%;
+    right: 2em;
     bottom: 2em;
-    transition: right 0.4s;
+
+    transform: translateX(40em);
+    transition: transform 0.4s;
     
     background-color: var(--background-color);
     height: 7em;
@@ -418,7 +457,7 @@ header{
     box-shadow: 0 0 0.2em  var(--font-color);
 }
 #modal.active{
-    right: 2em;
+    transform: translateX(0em);
 }
 #modal .image{
     object-fit: cover;
@@ -428,4 +467,17 @@ header{
 }
 #modal-title {
     text-decoration: underline;
+}
+
+@media (max-width: 700px){
+    #modal {
+        height: 4em;
+        width: 15em;
+        transform: translateX(20em);
+        right: 0.5em;
+        bottom: 0.5em;
+    }
+    #modal.active{
+        transform: translateX(0em);
+    }
 }
