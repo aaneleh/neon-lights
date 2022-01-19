@@ -160,7 +160,7 @@ header{
     justify-content: space-evenly;
 
     height: 100vh;
-    padding: 0em 5em 0 10em;
+    padding: 0em 5em 50em 10em;
     background-color: var(--background-color);
     border-left: 0.020em solid var(--font-color);
 }
@@ -351,9 +351,6 @@ header{
         left: 2em;
         top: 2em;
     }
-    #side-bar {
-        height: max(115vh, 100%);
-    }
     #side-bar.active{
         right: 0;
         visibility: visible;
@@ -415,6 +412,19 @@ header{
     text-align: center;
     margin-top: 3em;
 }
+.quant-input {
+    display: flex;
+}
+.quant-input svg{
+    margin: 0 1em;
+    fill: var(--font-color);
+    cursor: pointer;
+}
+#buttons-svgs{
+    visibility: hidden;
+    position: absolute;
+}
+
 
 @media (max-width: 700px){
     .item .image{
@@ -438,6 +448,8 @@ header{
 
 /************ MODAL *************/
 #modal {
+    z-index: 100;
+
     display: flex;
     align-items: center;
     color: var(--font-color);
@@ -456,6 +468,14 @@ header{
     border-radius: 1em;
     box-shadow: 0 0 0.2em  var(--font-color);
 }
+.modal-text {
+    display: flex;
+    flex-direction: column;
+}
+.modal-text a{
+    margin: 1em 0.5em ;
+    text-align: center;
+}
 #modal.active{
     transform: translateX(0em);
 }
@@ -471,7 +491,7 @@ header{
 
 @media (max-width: 700px){
     #modal {
-        height: 4em;
+        height: 10em;
         width: 15em;
         transform: translateX(20em);
         right: 0.5em;
@@ -479,5 +499,9 @@ header{
     }
     #modal.active{
         transform: translateX(0em);
+    }
+    #modal .image{
+        visibility: hidden;
+        position: absolute;
     }
 }
