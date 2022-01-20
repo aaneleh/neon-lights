@@ -8,30 +8,6 @@ if(localCart !== null){
     cart = [];
 }
 
-/***  INCREASE/DECREASE QUANTITY***/
-function decreaseQuantity(id){
-
-
-    for(var i=0; i< cart.length; i++){
-        if(cart[i].id == id){
-            if(cart[i].quantity - 1 >= 0){
-                cart[i].quantity--;
-                alert("item " + id + " --");
-            }
-        }
-    } 
-}
-
-function increaseQuantity(id){
-
-    for(var i=0; i< cart.length; i++){
-        if(i == id){
-            cart[i].quantity++;
-            //alert("item " + id + " ++");
-        }
-    } 
-}
-
 
 /******** WRITE ITENS IN HTML*******/
 const minus_svg = document.getElementById('minus');
@@ -82,14 +58,6 @@ function newItem(id, image, name, price, quantity){
     inputEl.appendChild(plusEl);
     newDiv.appendChild(inputEl);
     newDiv.classList.add('item');
-    
-    
-    //
-    minusEl.classList.add('minus-' + id);
-    plusEl.classList.add('plus-' + id);
-    minusEl.addEventListener('onclick', decreaseQuantity(id),false);
-    plusEl.addEventListener('onclick', increaseQuantity(id),false);
-    
     
     /* RETURN THE NEW DIV WITH THE CONTENT CREATED */
     return newDiv;
