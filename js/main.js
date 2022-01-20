@@ -16,16 +16,31 @@ const image_2 = document.getElementById('slide-2');
 function ImageOne(){
     check_1.classList.add('checked');
     check_2.classList.remove('checked');
-    image_1.style.right = "0%";
-    image_2.style.left = "100%";
+
+    image_1.style.transform = "translateX(0vw)";
+    image_2.style.transform = "translateX(+100vw)";
+
 }
 function ImageTwo(){
     check_2.classList.add('checked');
     check_1.classList.remove('checked');
-    image_1.style.right = "100%";
-    image_2.style.left = "0%";
-}
 
+    image_1.style.transform = "translateX(-100vw)";
+    image_2.style.transform = "translateX(0vw)";
+
+}
+/*
+#slide-1 {
+    position: relative;
+    transform: translateX(-100vw);
+}
+#slide-2 {
+    position: absolute;
+    left:0;
+    top:0;
+    transform: translateX(0vw);
+}
+*/
 
 
 /********* CHANGE COLOR *********/

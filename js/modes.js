@@ -1,14 +1,22 @@
 /********* LIGHT / DARK MODE *********/
 const root = document.querySelector(':root');
+
+const moon = document.getElementById('moon-icon');
+const sun = document.getElementById('sun-icon');
+
 function darkMode(){
     root.style.setProperty('--background-color', 'hsl(var(--hue), 16%, 8%)');
     root.style.setProperty('--font-color', 'hsl(var(--hue), 0%, 100%)');
     root.style.setProperty('--icons-color', 'hsl(var(--hue), 0%, 100%)');
+    sun.classList.add('active');
+    moon.classList.remove('active');
 }
 function lightMode(){
     root.style.setProperty('--background-color', 'hsl(var(--hue), 0%, 100%)');
     root.style.setProperty('--font-color', 'hsl(var(--hue), 16%, 8%)');
     root.style.setProperty('--icons-color', 'hsl(var(--hue), 16%, 8%)');
+    sun.classList.remove('active');
+    moon.classList.add('active');
 }
 
 /********* CHANGE MODE *********/
