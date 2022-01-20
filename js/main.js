@@ -27,21 +27,14 @@ function ImageTwo(){
 
     image_1.style.transform = "translateX(-100vw)";
     image_2.style.transform = "translateX(0vw)";
+}
 
-}
-/*
-#slide-1 {
-    position: relative;
-    transform: translateX(-100vw);
-}
-#slide-2 {
-    position: absolute;
-    left:0;
-    top:0;
-    transform: translateX(0vw);
-}
-*/
 
+function autoSlide(){
+    ImageOne();
+    setTimeout(() => ImageTwo() , 3000);
+}
+autoSlide();
 
 /********* CHANGE COLOR *********/
 const color_input = document.getElementById('color-input');
