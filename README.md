@@ -1,6 +1,6 @@
 # Neon-lights
 
-![Badge last-commit](https://img.shields.io/github/last-commit/aaneleh/neon-lights)
+[![Badge last-commit](https://img.shields.io/github/last-commit/aaneleh/neon-lights)](https://twitter.com/helena_kurzzz)
 ![Badge twitter](https://img.shields.io/github/issues/aaneleh/neon-lights)
 ![Badge twitter](https://img.shields.io/twitter/follow/helena_kurzzz)
 
