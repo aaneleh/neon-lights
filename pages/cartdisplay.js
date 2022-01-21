@@ -30,8 +30,8 @@ function newItem(id, image, name, price, quantity){
     
     /* ADD TEXT BASED ON INPUT */
     idEl.textContent = id;
-    imageEl.src = "/"+image;
-    //imageEl.src = "/neon-lights/"+image;
+    //imageEl.src = "/"+image;
+    imageEl.src = "/neon-lights/"+image;
     nameEl.textContent = name;
     descriptionEl.appendChild(nameEl);
     spanEl.textContent = price;
