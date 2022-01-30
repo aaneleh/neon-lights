@@ -35,6 +35,7 @@ No carrinho você pode ver a soma de todos os itens e as informações sobre cad
 ## Demonstração
 
 [![IMAGE ALT TEXT](https://img.youtube.com/vi/r6oiODYQUJ0/0.jpg)](https://www.youtube.com/watch?v=r6oiODYQUJ0)  
+  
 E você mesmo pode testar [aqui](https://aaneleh.github.io/neon-lights/)!  
 
 ## Tecnologias
@@ -69,7 +70,8 @@ In your cart you can see the sum of all the itens and the info relative to each 
 
 ## Demo
 
-[![IMAGE ALT TEXT](https://img.youtube.com/vi/r6oiODYQUJ0/0.jpg)](https://www.youtube.com/watch?v=r6oiODYQUJ0)  
+[![IMAGE ALT TEXT](https://img.youtube.com/vi/r6oiODYQUJ0/0.jpg)](https://www.youtube.com/watch?v=r6oiODYQUJ0)
+  
 Try it yourself [here](https://aaneleh.github.io/neon-lights/)!
 
 
