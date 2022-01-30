@@ -34,8 +34,8 @@ No carrinho você pode ver a soma de todos os itens e as informações sobre cad
 
 ## Demonstração
 
-Em breve, quero fazer alguns ajustes primeiro.  
-Mas você pode testar aqui: https://aaneleh.github.io/neon-lights/  
+[![IMAGE ALT TEXT](https://img.youtube.com/vi/r6oiODYQUJ0/0.jpg)](https://www.youtube.com/watch?v=r6oiODYQUJ0)  
+E você mesmo pode testar [aqui](https://aaneleh.github.io/neon-lights/)!  
 
 ## Tecnologias
 
@@ -69,8 +69,8 @@ In your cart you can see the sum of all the itens and the info relative to each 
 
 ## Demo
 
-[Youtube video](https://www.youtube.com/watch?v=r6oiODYQUJ0)
-Try it yourself at https://aaneleh.github.io/neon-lights/ !
+[![IMAGE ALT TEXT](https://img.youtube.com/vi/r6oiODYQUJ0/0.jpg)](https://www.youtube.com/watch?v=r6oiODYQUJ0)  
+Try it yourself [here](https://aaneleh.github.io/neon-lights/)!
 
 
 ## Tech
