@@ -69,7 +69,7 @@ In your cart you can see the sum of all the itens and the info relative to each 
 
 ## Demo
 
-<iframe width="1333" height="759" src="https://www.youtube.com/embed/r6oiODYQUJ0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+[Youtube video](https://www.youtube.com/watch?v=r6oiODYQUJ0)
 Try it yourself at https://aaneleh.github.io/neon-lights/ !
 
 
