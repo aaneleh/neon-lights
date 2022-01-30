@@ -69,8 +69,8 @@ In your cart you can see the sum of all the itens and the info relative to each 
 
 ## Demo
 
-Soon, I want to adjust some stuff before I record a video.  
-But you can test it at https://aaneleh.github.io/neon-lights/  
+<iframe width="1333" height="759" src="https://www.youtube.com/embed/r6oiODYQUJ0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+Try it yourself at https://aaneleh.github.io/neon-lights/ !
 
 
 ## Tech
